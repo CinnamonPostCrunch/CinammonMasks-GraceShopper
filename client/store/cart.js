@@ -56,6 +56,7 @@ export const resetCart = () => ({type: RESET_CART})
 /**
  * THUNK CREATORS
  */
+
 export const fetchCart = () => async (dispatch, getState) => {
   try {
     const {user} = getState()
@@ -119,6 +120,17 @@ export const deleteFromCart = maskId => async (dispatch, getState) => {
     console.log(err)
   }
 }
+
+// export const resetTheCart = () => async (dispatch, getState) => {
+//   try {
+//     const {user} = getState()
+//     if (user.id) {
+//       dispatch(resetCart())
+//     }
+//   } catch (error) {
+//     console.error(err)
+//   }
+// }
 
 /**
  * REDUCER

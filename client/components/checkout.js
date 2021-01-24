@@ -7,6 +7,7 @@ import Checkbox from '@material-ui/core/Checkbox'
 import Button from '@material-ui/core/Button'
 import {connect} from 'react-redux'
 import {postCheckout} from '../store/checkout'
+import {resetCart} from '../store/cart'
 
 class Checkout extends React.Component {
   constructor(props) {
@@ -33,11 +34,11 @@ class Checkout extends React.Component {
 
   submitOrder(evt) {
     evt.preventDefault()
-    console.log('THIS!!!--->', this)
     let {address1, address2, city, state, zip, country} = this.state
     this.props.placeOrder({
       shippingAddress: `${address1}, ${address2}, ${city}, ${state}, ${zip}, ${country}`
     })
+    this.props.resetCart()
     this.props.history.push('/ordercomplete')
   }
 
@@ -237,7 +238,8 @@ class Checkout extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  placeOrder: address => dispatch(postCheckout(address))
+  placeOrder: address => dispatch(postCheckout(address)),
+  resetCart: () => dispatch(resetCart())
 })
 
 export default connect(null, mapDispatchToProps)(Checkout)
