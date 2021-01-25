@@ -31,7 +31,7 @@ const initialCart = localStorage.getItem('localCart')
 /**
  * ACTION CREATORS
  */
-const setCart = cart => ({type: SET_CART, cart})
+// export const setCart = cart => ({type: SET_CART, cart})
 
 const addToCart = (maskId, quantity, price) => ({
   type: ADD_TO_CART,
