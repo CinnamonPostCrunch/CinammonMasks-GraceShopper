@@ -59,7 +59,7 @@ const Navbar = ({logOut, isLoggedIn, firstName, cart}) => {
                     type="onSubmit"
                     className="cinnamon-header"
                   >
-                    CINNAMON MASKS*
+                    CINNAMON MASKS
                   </Button>
                 </Link>
               ) : (
