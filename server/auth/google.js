@@ -24,8 +24,7 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
   const googleConfig = {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.GOOGLE_CALLBACK,
-    proxy: true
+    callbackURL: process.env.GOOGLE_CALLBACK
   }
 
   const strategy = new GoogleStrategy(
