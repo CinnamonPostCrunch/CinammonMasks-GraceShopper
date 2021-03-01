@@ -231,7 +231,7 @@ const SignInForm = props => {
             </Grid>
           </Grid>
         </form>
-        <a href="/auth/google">{displayName} with Google</a>
+        {/* <a href="/auth/google">{displayName} with Google</a> */}
       </div>
       <Box mt={8}>
         <Copyright />

@@ -138,9 +138,9 @@ const Navbar = ({logOut, isLoggedIn, firstName, cart}) => {
                     </span>
                   )}
                   {/* Cart ............ */}
-                  <Link to="/orders">
+                  {/* <Link to="/orders">
                     <MenuItem onClick={handleClose}>Order History</MenuItem>
-                  </Link>
+                  </Link> */}
                 </Menu>
                 <Link to="/shopping-cart">
                   <Button>
