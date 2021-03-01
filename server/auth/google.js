@@ -26,7 +26,7 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     callbackURL:
       process.env.NODE_ENV === 'production'
-        ? 'http://cinammonmasks.herokuapp.com/auth/google/callback'
+        ? 'http://cinnamonmasks.herokuapp.com/auth/google/callback'
         : process.env.GOOGLE_CALLBACK
   }
 
