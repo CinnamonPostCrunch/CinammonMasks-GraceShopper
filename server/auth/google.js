@@ -25,9 +25,9 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     callbackURL:
-      process.env.NODE_ENV === 'production'
-        ? 'http://cinnamonmasks.herokuapp.com/auth/google/callback'
-        : process.env.GOOGLE_CALLBACK
+      process.env.NODE_ENV === 'development'
+        ? process.env.GOOGLE_CALLBACK
+        : 'http://cinnamonmasks.herokuapp.com/auth/google/callback'
   }
 
   const strategy = new GoogleStrategy(
